@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Leaflet Fullscreen Map</title>
+        <title>Meu lugar</title>
 
         <!-- Leaflet -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -13,7 +13,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <link rel="stylesheet" href="./index.css" />
+        <link rel="stylesheet" href="./assets/css/index.css" />
     </head>
 
     <body>
@@ -23,7 +23,7 @@
                 <div class="navbar">
                     <div class="navbar-brand">
                         <a href="#">
-                            <img src="./logo.png" alt="Logo" />
+                            <img src="./assets/imgs/logo.png" alt="Logo" />
                         </a>
                     </div>
                     <div id="searchBar">
@@ -31,10 +31,10 @@
                     </div>
                 </div>
             </nav>
-            
-            <img class="send-review-icon invisible" src="./editar_2.png" alt="Enviar Avaliação" data-bs-toggle="modal" data-bs-target="#avaliacaoModal" style="cursor: pointer" />
 
-            <img class="avatar-icon" src="./avatar-do-usuario.png" alt="Avatar do Usuário" />
+            <img class="send-review-icon invisible" src="./assets/imgs/editar_2.png" alt="Enviar Avaliação" data-bs-toggle="modal" data-bs-target="#avaliacaoModal" style="cursor: pointer" />
+
+            <img class="avatar-icon" src="./assets/imgs/avatar-do-usuario.png" alt="Avatar do Usuário" />
         </div>
 
         <!-- Modal de Avaliação -->
@@ -45,10 +45,28 @@
                         <h5 class="modal-title" id="avaliacaoModalLabel">Enviar Avaliação</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
+                    <div class="mb-3"></div>
                     <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Seu nome</label>
-                            <input type="text" class="form-control" id="nome" required />
+                        <label class="form-label">Pontos Positivos para PCD</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="rampa" id="checkRampa" />
+                            <label class="form-check-label" for="checkRampa"> Rampa de acesso </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="sonoro" id="checkSonoro" />
+                            <label class="form-check-label" for="checkSonoro"> Ambiente com pouca poluição sonora </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="visual" id="checkVisual" />
+                            <label class="form-check-label" for="checkVisual"> Ambiente com poucos estímulos visuais </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="braille" id="checkBraille" />
+                            <label class="form-check-label" for="checkBraille"> Cardápio em Braille </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="banheiro" id="checkBanheiro" />
+                            <label class="form-check-label" for="checkBanheiro"> Banheiro adaptado </label>
                         </div>
                         <div class="mb-3">
                             <label for="nota" class="form-label">Nota (1 a 5)</label>
@@ -75,7 +93,7 @@
         </div>
 
         <!-- Seus scripts -->
-        <script src="./index.js"></script>
-        <script src="./cafes.js"></script>
+        <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/cafes.js"></script>
     </body>
 </html>
