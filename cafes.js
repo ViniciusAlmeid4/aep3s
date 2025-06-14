@@ -125,7 +125,7 @@ function renderStars(rating) {
     return "★".repeat(rating) + "☆".repeat(5 - rating);
 }
 
-var selectedCafe = 
+var selectedCafe = null
 
 cafes.forEach((cafe) => {
     const marker = L.marker(cafe.coords).addTo(map).bindPopup(`
@@ -142,5 +142,6 @@ cafes.forEach((cafe) => {
         map.setView(marker.getLatLng(), 17);
         marker.openPopup();
         selectedCafe = marker;
+        document.querySelector(".send-review-icon").classList.remove("invisible");
     });
 });

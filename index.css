@@ -166,3 +166,7 @@ nav {
 .send-review-icon:hover, .avatar-icon:hover{
     transform: scale(1.05);
 }
+
+.invisible {
+    visibility: hidden;
+}
